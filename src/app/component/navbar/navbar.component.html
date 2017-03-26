@@ -1,0 +1,74 @@
+
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-dark bg-primary">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapseEx12" aria-controls="collapseEx2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" [routerLink]="['/']">Mari Bercerita</a>
+        <div class="collapse navbar-collapse" id="collapseEx12">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a [routerLink]="['/']" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/stories']" class="nav-link">Stories</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-toggler-right">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#myModal">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="logout()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--/.Navbar-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+                <h4 class="modal-title w-100" id="myModalLabel" style="text-align: center;">Daftar baru atau Login </h4>
+            </div>
+            <!--Body-->
+            <div class="modal-body" >
+                <!-- Nama -->
+                <div class="md-form">
+                    <i class="fa fa-user prefix"></i>
+                    <input type="text" id="form2" class="form-control">
+                    <label for="form2">Nama</label>
+                </div>
+                <!--Email validation-->
+                <div class="md-form">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="email" id="form9" class="form-control validate">
+                    <label for="form9" data-error="wrong" data-success="right">Email</label>
+                </div>
+                <!--Password validation-->
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="form10" class="form-control validate">
+                    <label for="form10" data-error="wrong" data-success="right">Password</label>
+                </div>
+                <!-- Pekerjaan -->
+                <div class="md-form">
+                    <i class="fa fa-briefcase prefix"></i>
+                    <input type="text" id="form2" class="form-control">
+                    <label for="form2">Pekerjaan</label>
+                </div>
+                <hr />
+                <button (click)="login()" type="button" style="background-color: #e53935; padding-left: 100px; text-align: left;" class="btn waves-effect btn-block"><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i>&nbsp; Login dengan akun Google</button>
+                <button type="button" style="background-color: #303f9f; padding-left: 96px; text-align: left;" class="btn waves-effect btn-block"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i>&nbsp;&nbsp; Login dengan akun Facebook</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- /.Live preview-->
